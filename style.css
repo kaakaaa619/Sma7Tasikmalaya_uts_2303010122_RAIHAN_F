@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    --color-primary: #007BFF;
+    --color-secondary: #FFC107;
+    --color-dark: #222831;
+    --color-light: #F8F9FA;
+    --color-white: #FFFFFF;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+
+.raihan_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.raihan_grid_3_col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.raihan_section {
+    padding: 60px 0;
+}
+
+.raihan_section_light {
+    background-color: var(--color-light);
+}
+
+.raihan_section_title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.raihan_section_subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.raihan_btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.raihan_btn_primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.raihan_btn_primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.raihan_btn_special {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
+
+.raihan_btn_special:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+
+#raihan_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+#raihan_header.raihan_scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.raihan_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.raihan_nav_brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+.raihan_nav_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+.raihan_nav_link {
+    font-family: var(--font-heading);
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.raihan_nav_link:hover,
+.raihan_nav_link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.raihan_nav_link.raihan_btn {
+    color: var(--color-dark) !important;
+}
+.raihan_nav_link.raihan_btn:hover {
+    background-color: #e0a800;
+}
+.raihan_nav_link.raihan_btn.active {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+.raihan_nav_toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.raihan_nav_toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+
+.raihan_hero {
+    margin-top: 70px; 
+    height: calc(90vh - 70px);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sma7.jpg') no-repeat center center/cover;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.raihan_hero_content {
+    /* Animasi */
+}
+
+.raihan_hero_title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.raihan_hero_subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+
+.raihan_welcome_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.raihan_welcome_img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin: 0 auto;
+}
+
+
+.raihan_card {
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.raihan_card:hover {
+    transform: translateY(-10px);
+}
+
+.raihan_card_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.raihan_card_body {
+    padding: 25px;
+}
+
+.raihan_card_tag {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.raihan_card_title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.raihan_card_link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+
+.raihan_form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.raihan_form_group {
+    margin-bottom: 20px;
+}
+
+.raihan_form_group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.raihan_form_control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.raihan_form_control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+
+.raihan_footer {
+    background-color: var(--color-dark);
+    color: #aaa;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.raihan_footer p {
+    margin-bottom: 5px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.raihan_fade_in {
+    animation: fadeIn 1s ease-out;
+}
+
+.raihan_fade_up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.raihan_fade_up.raihan_visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+    .raihan_section_title {
+        font-size: 2rem;
+    }
+
+    .raihan_hero_title {
+        font-size: 2.5rem;
+    }
+
+    .raihan_grid_3_col {
+        grid-template-columns: 1fr; 
+    }
+
+    .raihan_welcome_grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+
+    .raihan_nav_toggle {
+        display: flex;
+        z-index: 1001; 
+    }
+
+    .raihan_nav_menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 60%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: var(--color-white);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 100px;
+        gap: 25px;
+        transition: right 0.4s ease-in-out;
+    }
+
+    .raihan_nav_menu.raihan_mobile_active {
+        right: 0;
+    }
+
+    .raihan_nav_toggle.raihan_mobile_active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .raihan_nav_toggle.raihan_mobile_active span:nth-child(2) {
+        opacity: 0;
+    }
+    .raihan_nav_toggle.raihan_mobile_active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+} 
+
+
+.raihan_identitas_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px 30px; 
+    background: var(--color-white); 
+    padding: 35px 40px; 
+    border-radius: 15px; 
+    box-shadow: var(--shadow); 
+    max-width: 900px;
+    margin: 30px auto 60px auto; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.raihan_identitas_grid::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--color-primary) 0%, rgba(0,123,255,0) 70%);
+    opacity: 0.05;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    pointer-events: none; 
+}
+
+.raihan_identitas_grid::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, var(--color-secondary) 0%, rgba(255,193,7,0) 70%);
+    opacity: 0.08;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    pointer-events: none;
+}
+
+.raihan_identitas_item {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+    transition: all 0.2s ease-in-out;
+}
+
+.raihan_identitas_item:last-child {
+    border-bottom: none; 
+}
+
+.raihan_identitas_item:hover {
+    transform: translateX(5px);
+    color: var(--color-primary); 
+}
+
+.raihan_identitas_item .label {
+    font-family: var(--font-body); 
+    font-size: 0.85rem; 
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.raihan_identitas_item .value {
+    font-size: 1.05rem; 
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+
+.raihan_visi_misi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+        
+
+
+@media (min-width: 768px) {
+    /* Membuat Visi & Misi jadi 2 kolom di desktop */
+    .raihan_visi_misi {
+        grid-template-columns: 1fr 1.5fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* Memperbaiki grid identitas di HP */
+    .raihan_identitas_grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .raihan_identitas_grid::before,
+    .raihan_identitas_grid::after {
+        display: none; 
+    }
+}
+
+
+.raihan_page_header {
+    margin-top: 70px; 
+    padding: 60px 0; 
+    background: linear-gradient(135deg, var(--color-primary) 0%, #004a99 100%);
+    color: var(--color-white); 
+    position: relative;
+    overflow: hidden; 
+}
+
+.raihan_page_header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 80%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.05); 
+    transform: rotate(25deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.raihan_page_header .raihan_container {
+     position: relative;
+     z-index: 2; 
+     text-align: center; 
+}
+
+.raihan_page_header .raihan_section_title {
+    color: var(--color-white);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.raihan_page_header .raihan_section_subtitle {
+    color: rgba(255, 255, 255, 0.85); 
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .raihan_page_header {
+        padding: 40px 0;
+    }
+    .raihan_page_header .raihan_section_title {
+        font-size: 2.2rem;
+    }
+    .raihan_page_header .raihan_section_subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+.raihan_lokasi_wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: var(--shadow); 
+    background: #eee; 
+}
+
+.raihan_lokasi_wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; 
+}
+
+
+.raihan_visi_card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #004a99 100%); 
+    color: var(--color-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.raihan_visi_card .raihan_section_title {
+    color: var(--color-white); 
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.raihan_visi_card .raihan_visi_text {
+    font-family: var(--font-heading); 
+    font-size: 1.5rem; 
+    font-weight: 600;
+    line-height: 1.4;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.raihan_misi_card {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eee; 
+}
+
+.raihan_misi_card .raihan_section_title {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.raihan_misi_list {
+    list-style: none; 
+    padding-left: 0;
+    counter-reset: misi-counter; 
+}
+
+.raihan_misi_list li {
+    counter-increment: misi-counter; 
+    position: relative;
+    padding-left: 50px; 
+    margin-bottom: 20px; 
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.raihan_misi_list li::before {
+    content: counter(misi-counter); 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-secondary); 
+    color: var(--color-dark); 
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50%; 
+    display: grid;
+    place-items: center; 
+    line-height: 1;
+}
+
+
+
+.raihan_gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 250px; 
+    grid-auto-flow: dense; 
+    gap: 15px; 
+}
+
+.raihan_gallery_item {
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.raihan_gallery_item:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.raihan_gallery_item img,
+.raihan_gallery_item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.raihan_item_v {
+    grid-row: span 2; 
+    height: calc(500px + 15px); 
+}
+
+.raihan_item_h {
+    grid-column: span 2; 
+}
+
+@media (max-width: 768px) {
+    .raihan_gallery_grid {
+        grid-template-columns: 1fr; 
+        grid-auto-rows: 300px; 
+    }
+    
+    .raihan_item_v,
+    .raihan_item_h {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 100%;
+    }
+}
+
+
+.raihan_lightbox {
+    position: fixed; 
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(5px);
+    display: none; 
+    place-items: center; 
+    animation: fadeIn 0.3s ease; 
+}
+
+.raihan_lightbox.raihan_active {
+    display: grid;
+}
+
+.raihan_lightbox_content {
+    max-width: 90%;
+    max-height: 85vh; 
+    border-radius: 5px;
+    animation: fadeUp 0.4s ease; 
+}
+
+.raihan_lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.raihan_lightbox_close:hover {
+    opacity: 0.7;
+}
+
+
+.raihan_social_float {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 100; 
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.raihan_social_float a {
+    display: grid;
+    place-items: center; 
+    width: 50px;
+    height: 50px;
+    background: var(--color-white); 
+    color: var(--color-dark); 
+    font-size: 24px; 
+    text-decoration: none;
+    border-radius: 50%; 
+    box-shadow: var(--shadow); 
+    transition: all 0.3s ease;
+}
+
+.raihan_social_float a:hover {
+    transform: scale(1.1) translateY(-3px); 
+    background: var(--color-primary); 
+    color: var(--color-white); 
+}
+
+
